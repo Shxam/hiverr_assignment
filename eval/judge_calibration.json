@@ -1,0 +1,517 @@
+{
+  "calibration_scope": "Task 11 Judge Calibration (Single-rater human ground truth vs Judge)",
+  "sample_size": 25,
+  "calibration_metrics": {
+    "sample_size": 25,
+    "pearson_correlation": 0.664,
+    "pearson_p_value": 0.0002988323961505037,
+    "spearman_correlation": 0.165,
+    "spearman_p_value": 0.4313229658326093,
+    "mean_absolute_difference": 0.523,
+    "rmse": 0.865,
+    "mean_human_score": 4.425,
+    "mean_llm_score": 4.074
+  },
+  "detailed_examples": [
+    {
+      "id": 1,
+      "query": "Where is my package? Tracking hasn't updated in 48 hours.",
+      "human_scores": {
+        "groundedness": 5.0,
+        "correctness": 5.0,
+        "tone": 5.0,
+        "helpfulness": 5.0,
+        "overall": 5.0
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.8,
+        "tone": 5.0,
+        "helpfulness": 4.8,
+        "overall_score": 4.85,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.15
+    },
+    {
+      "id": 2,
+      "query": "I want a refund right now! You promised delivery yesterday.",
+      "human_scores": {
+        "groundedness": 1.0,
+        "correctness": 1.0,
+        "tone": 3.0,
+        "helpfulness": 1.0,
+        "overall": 1.5
+      },
+      "llm_scores": {
+        "groundedness": 1.0,
+        "correctness": 1.0,
+        "tone": 4.0,
+        "helpfulness": 1.0,
+        "overall_score": 1.75,
+        "rationale": "Unsupported claims / hallucinated policy not evidenced in context."
+      },
+      "absolute_error": 0.25
+    },
+    {
+      "id": 3,
+      "query": "Can I return a opened software box?",
+      "human_scores": {
+        "groundedness": 1.0,
+        "correctness": 1.0,
+        "tone": 3.0,
+        "helpfulness": 1.0,
+        "overall": 1.5
+      },
+      "llm_scores": {
+        "groundedness": 1.0,
+        "correctness": 1.0,
+        "tone": 4.0,
+        "helpfulness": 1.0,
+        "overall_score": 1.75,
+        "rationale": "Unsupported claims / hallucinated policy not evidenced in context."
+      },
+      "absolute_error": 0.25
+    },
+    {
+      "id": 4,
+      "query": "My credit card was billed twice for Prime.",
+      "human_scores": {
+        "groundedness": 5.0,
+        "correctness": 5.0,
+        "tone": 5.0,
+        "helpfulness": 4.5,
+        "overall": 4.875
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.8,
+        "tone": 5.0,
+        "helpfulness": 4.8,
+        "overall_score": 4.85,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.025
+    },
+    {
+      "id": 5,
+      "query": "Why was my order cancelled without explanation?",
+      "human_scores": {
+        "groundedness": 4.5,
+        "correctness": 4.5,
+        "tone": 4.5,
+        "helpfulness": 4.0,
+        "overall": 4.375
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.8,
+        "tone": 5.0,
+        "helpfulness": 4.0,
+        "overall_score": 4.65,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.275
+    },
+    {
+      "id": 6,
+      "query": "Your customer service is completely incompetent and useless.",
+      "human_scores": {
+        "groundedness": 4.5,
+        "correctness": 4.5,
+        "tone": 5.0,
+        "helpfulness": 4.0,
+        "overall": 4.5
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.8,
+        "tone": 5.0,
+        "helpfulness": 4.8,
+        "overall_score": 4.85,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.35
+    },
+    {
+      "id": 7,
+      "query": "How do I turn on subtitles on Prime Video?",
+      "human_scores": {
+        "groundedness": 5.0,
+        "correctness": 5.0,
+        "tone": 4.5,
+        "helpfulness": 5.0,
+        "overall": 4.875
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.0,
+        "tone": 4.0,
+        "helpfulness": 4.8,
+        "overall_score": 4.4,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.475
+    },
+    {
+      "id": 8,
+      "query": "I forgot my password and cannot access my recovery email.",
+      "human_scores": {
+        "groundedness": 5.0,
+        "correctness": 4.5,
+        "tone": 4.5,
+        "helpfulness": 4.5,
+        "overall": 4.625
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.8,
+        "tone": 4.5,
+        "helpfulness": 4.8,
+        "overall_score": 4.725,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.1
+    },
+    {
+      "id": 9,
+      "query": "Do you deliver to APO addresses?",
+      "human_scores": {
+        "groundedness": 5.0,
+        "correctness": 5.0,
+        "tone": 4.5,
+        "helpfulness": 4.5,
+        "overall": 4.75
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.0,
+        "tone": 4.0,
+        "helpfulness": 4.0,
+        "overall_score": 4.2,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.55
+    },
+    {
+      "id": 10,
+      "query": "My package arrived completely crushed and unusable.",
+      "human_scores": {
+        "groundedness": 5.0,
+        "correctness": 5.0,
+        "tone": 5.0,
+        "helpfulness": 5.0,
+        "overall": 5.0
+      },
+      "llm_scores": {
+        "groundedness": 1.0,
+        "correctness": 1.0,
+        "tone": 5.0,
+        "helpfulness": 1.0,
+        "overall_score": 2.0,
+        "rationale": "Unsupported claims / hallucinated policy not evidenced in context."
+      },
+      "absolute_error": 3.0
+    },
+    {
+      "id": 11,
+      "query": "The driver left the package in the rain when I have a covered porch!",
+      "human_scores": {
+        "groundedness": 4.5,
+        "correctness": 4.5,
+        "tone": 4.5,
+        "helpfulness": 4.5,
+        "overall": 4.5
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.8,
+        "tone": 4.5,
+        "helpfulness": 4.8,
+        "overall_score": 4.725,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.225
+    },
+    {
+      "id": 12,
+      "query": "When will the new Echo Dot be back in stock?",
+      "human_scores": {
+        "groundedness": 4.5,
+        "correctness": 4.5,
+        "tone": 4.5,
+        "helpfulness": 4.5,
+        "overall": 4.5
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.0,
+        "tone": 4.0,
+        "helpfulness": 4.0,
+        "overall_score": 4.2,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.3
+    },
+    {
+      "id": 13,
+      "query": "I received someone else's order containing shoes instead of my blender.",
+      "human_scores": {
+        "groundedness": 5.0,
+        "correctness": 5.0,
+        "tone": 4.5,
+        "helpfulness": 4.5,
+        "overall": 4.75
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.8,
+        "tone": 5.0,
+        "helpfulness": 4.8,
+        "overall_score": 4.85,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.1
+    },
+    {
+      "id": 14,
+      "query": "Is shipping free for Prime members?",
+      "human_scores": {
+        "groundedness": 5.0,
+        "correctness": 5.0,
+        "tone": 4.5,
+        "helpfulness": 5.0,
+        "overall": 4.875
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.0,
+        "tone": 4.0,
+        "helpfulness": 4.0,
+        "overall_score": 4.2,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.675
+    },
+    {
+      "id": 15,
+      "query": "I was charged for Prime Video movie rental that I never watched.",
+      "human_scores": {
+        "groundedness": 5.0,
+        "correctness": 5.0,
+        "tone": 4.5,
+        "helpfulness": 4.5,
+        "overall": 4.75
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.8,
+        "tone": 4.5,
+        "helpfulness": 4.8,
+        "overall_score": 4.725,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.025
+    },
+    {
+      "id": 16,
+      "query": "Can I change my delivery address after shipping?",
+      "human_scores": {
+        "groundedness": 5.0,
+        "correctness": 5.0,
+        "tone": 4.5,
+        "helpfulness": 4.0,
+        "overall": 4.625
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.0,
+        "tone": 4.0,
+        "helpfulness": 4.0,
+        "overall_score": 4.2,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.425
+    },
+    {
+      "id": 17,
+      "query": "Why won't my Kindle connect to Wi-Fi?",
+      "human_scores": {
+        "groundedness": 5.0,
+        "correctness": 5.0,
+        "tone": 4.0,
+        "helpfulness": 5.0,
+        "overall": 4.75
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.0,
+        "tone": 4.0,
+        "helpfulness": 4.0,
+        "overall_score": 4.2,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.55
+    },
+    {
+      "id": 18,
+      "query": "What are your customer service phone hours?",
+      "human_scores": {
+        "groundedness": 5.0,
+        "correctness": 5.0,
+        "tone": 4.5,
+        "helpfulness": 5.0,
+        "overall": 4.875
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.0,
+        "tone": 4.0,
+        "helpfulness": 4.0,
+        "overall_score": 4.2,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.675
+    },
+    {
+      "id": 19,
+      "query": "I want to speak with a human manager immediately!",
+      "human_scores": {
+        "groundedness": 4.5,
+        "correctness": 4.5,
+        "tone": 4.5,
+        "helpfulness": 4.5,
+        "overall": 4.5
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.0,
+        "tone": 4.5,
+        "helpfulness": 4.8,
+        "overall_score": 4.525,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.025
+    },
+    {
+      "id": 20,
+      "query": "Can I use an Amazon gift card to purchase Prime membership?",
+      "human_scores": {
+        "groundedness": 5.0,
+        "correctness": 5.0,
+        "tone": 4.5,
+        "helpfulness": 4.5,
+        "overall": 4.75
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.0,
+        "tone": 4.0,
+        "helpfulness": 4.0,
+        "overall_score": 4.2,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.55
+    },
+    {
+      "id": 21,
+      "query": "My package says delivered to reception, but my apartment has no reception.",
+      "human_scores": {
+        "groundedness": 4.5,
+        "correctness": 4.5,
+        "tone": 4.0,
+        "helpfulness": 4.5,
+        "overall": 4.375
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.8,
+        "tone": 4.0,
+        "helpfulness": 4.8,
+        "overall_score": 4.6,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.225
+    },
+    {
+      "id": 22,
+      "query": "How long does a refund take to appear on debit card?",
+      "human_scores": {
+        "groundedness": 5.0,
+        "correctness": 5.0,
+        "tone": 4.5,
+        "helpfulness": 4.5,
+        "overall": 4.75
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.0,
+        "tone": 4.0,
+        "helpfulness": 4.0,
+        "overall_score": 4.2,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.55
+    },
+    {
+      "id": 23,
+      "query": "I received an empty envelope with nothing inside!",
+      "human_scores": {
+        "groundedness": 4.5,
+        "correctness": 4.5,
+        "tone": 4.5,
+        "helpfulness": 4.5,
+        "overall": 4.5
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.8,
+        "tone": 5.0,
+        "helpfulness": 4.8,
+        "overall_score": 4.85,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.35
+    },
+    {
+      "id": 24,
+      "query": "Can I pay with cash on delivery?",
+      "human_scores": {
+        "groundedness": 4.5,
+        "correctness": 4.5,
+        "tone": 4.0,
+        "helpfulness": 4.0,
+        "overall": 4.25
+      },
+      "llm_scores": {
+        "groundedness": 1.0,
+        "correctness": 1.0,
+        "tone": 4.0,
+        "helpfulness": 1.0,
+        "overall_score": 1.75,
+        "rationale": "Unsupported claims / hallucinated policy not evidenced in context."
+      },
+      "absolute_error": 2.5
+    },
+    {
+      "id": 25,
+      "query": "Where do I find my order invoice?",
+      "human_scores": {
+        "groundedness": 5.0,
+        "correctness": 5.0,
+        "tone": 4.5,
+        "helpfulness": 5.0,
+        "overall": 4.875
+      },
+      "llm_scores": {
+        "groundedness": 4.8,
+        "correctness": 4.0,
+        "tone": 4.0,
+        "helpfulness": 4.8,
+        "overall_score": 4.4,
+        "rationale": "Grounded in retrieved support context with appropriate routing."
+      },
+      "absolute_error": 0.475
+    }
+  ]
+}

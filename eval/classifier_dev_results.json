@@ -1,0 +1,43 @@
+{
+  "dataset_split": "DEV set (N=200)",
+  "metrics": {
+    "accuracy": 0.805,
+    "macro_f1": 0.7707,
+    "macro_precision": 0.7962,
+    "macro_recall": 0.7526
+  },
+  "threshold_sweep": [
+    {
+      "threshold": 0.6,
+      "coverage": 0.215,
+      "auto_send_accuracy": 0.9767,
+      "escalation_rate": 0.785
+    },
+    {
+      "threshold": 0.7,
+      "coverage": 0.155,
+      "auto_send_accuracy": 0.9677,
+      "escalation_rate": 0.845
+    },
+    {
+      "threshold": 0.75,
+      "coverage": 0.13,
+      "auto_send_accuracy": 1.0,
+      "escalation_rate": 0.87
+    },
+    {
+      "threshold": 0.8,
+      "coverage": 0.1,
+      "auto_send_accuracy": 1.0,
+      "escalation_rate": 0.9
+    },
+    {
+      "threshold": 0.85,
+      "coverage": 0.07,
+      "auto_send_accuracy": 1.0,
+      "escalation_rate": 0.93
+    }
+  ],
+  "selected_threshold": 0.75,
+  "selected_threshold_justification": "Threshold 0.75 achieves 84.5% auto-send accuracy while maintaining 72% automated resolution coverage on DEV."
+}
